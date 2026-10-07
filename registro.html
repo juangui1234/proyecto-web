@@ -1,82 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Graduate&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap"
-        rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Graduate&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="contenedor_login">
-        <div class="formulario">
-            <form>
-                <h1 class="titulo_login">Registrate</h1>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+      <div class="formulario">
+        <form>
+          <h1 class="titulo_login">Registrate</h1>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
 
-                <label for="celular">Celular:</label>
-                <input type="tel" id="celular" name="celular" required>
+          <label for="celular">Celular:</label>
+          <input type="tel" id="celular" name="celular" required />
 
-                <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" name="direccion" required>
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" name="direccion" required />
 
-                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+          <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+          <input
+            type="date"
+            id="fecha_nacimiento"
+            name="fecha_nacimiento"
+            required
+          />
 
-                <label for="genero">Género:</label>
-                <div class="genero">
-                    <input type="radio" id="masculino" name="genero" value="masculino" required>
-                    <label for="masculino">Masculino</label>
-                    <input type="radio" id="femenino" name="genero" value="femenino" required>
-                    <label for="femenino">Femenino</label>
-                    <input type="radio" id="otro" name="genero" value="otro" required>
-                    <label for="otro">Otro</label>
-                </div>
+          <label for="genero">Género:</label>
+          <div class="genero">
+            <input
+              type="radio"
+              id="masculino"
+              name="genero"
+              value="masculino"
+              required
+            />
+            <label for="masculino">Masculino</label>
+            <input
+              type="radio"
+              id="femenino"
+              name="genero"
+              value="femenino"
+              required
+            />
+            <label for="femenino">Femenino</label>
+            <input type="radio" id="otro" name="genero" value="otro" required />
+            <label for="otro">Otro</label>
+          </div>
 
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" required>
+          <label for="correo">Correo:</label>
+          <input type="email" id="correo" name="correo" required />
 
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required>
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" required />
 
-                <label for="Carrera">Carrera:</label>
-                <select name="Carrera" id="Carrera">
-                    <option value="">Seleccionar carrera</option>
-                    <option value="Ingenieria">Ingenieria</option>
-                    <option value="Medicina">Medicina</option>
-                    <option value="Economia">Economia</option>
-                    <option value="Derecho">Derecho</option>
-                    <option value="Diseño">Diseño</option>
-                    <option value="Ambientales">Ambientales</option>
-                </select>
-                <p class="parrafo_login"> Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
-                <div class="botones">
-                    <button id="boton_registro" type="submit" >Registrarse</button>
-                    <button type="reset">Limpiar</button>
-                </div>
-                <div>
-                    <p class="parrafo_js" id="form_nombre" > </p>
-                    <p class="parrafo_js" id="form_celular"> </p>
-                    <p class="parrafo_js" id="form_direccion"> </p>
-                    <p class="parrafo_js" id="form_correo"> </p>
-                                    
-                </div>
-            </form>
-
-        </div>
-        <div class="logo_inicio_sesion">
-            <img class="img_inicio_sesion" src="img/logo_inicio_sesion.jpeg" alt="Imagen inicion sesion">
-        </div>
+          <label for="Carrera">Carrera:</label>
+          <select name="Carrera" id="Carrera">
+            <option value="">Seleccionar carrera</option>
+            <option value="Ingenieria">Ingenieria</option>
+            <option value="Medicina">Medicina</option>
+            <option value="Economia">Economia</option>
+            <option value="Derecho">Derecho</option>
+            <option value="Diseño">Diseño</option>
+            <option value="Ambientales">Ambientales</option>
+          </select>
+          <p class="parrafo_login">
+            Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a>
+          </p>
+          <div class="botones">
+            <button id="boton_registro" type="submit">Registrarse</button>
+            <button type="reset">Limpiar</button>
+          </div>
+          <div>
+            <p class="parrafo_js" id="form_nombre"></p>
+            <p class="parrafo_js" id="form_celular"></p>
+            <p class="parrafo_js" id="form_direccion"></p>
+            <p class="parrafo_js" id="form_correo"></p>
+          </div>
+        </form>
+      </div>
+      <div class="logo_inicio_sesion">
+        <img
+          class="img_inicio_sesion"
+          src="img/logo_inicio_sesion.jpeg"
+          alt="Imagen inicion sesion"
+        />
+      </div>
     </div>
-    <script  src="js/Script.js">    
-    </script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/proyecto-web/js/Script.js"></script>
+  </body>
 </html>
