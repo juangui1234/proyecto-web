@@ -33,3 +33,17 @@ $("#boton_registro").click(function(){
     $("#form_direccion").text(`Direccion: ${$("#direccion").val()}`)
     $("#form_correo").text(`Correo: ${$("#correo").val()}`)
 })
+
+$(".boton_mas_info").each(function(){
+    $(this).click(function(e){
+        $("#modal_imagen").attr("src", $(this).closest(".tarjeta").find(".imagen_programa").attr("src"))
+        $("#modal_titulo").text($(this).closest(".tarjeta").find("h3").text())
+        $("#modal_descripcion").text($(this).closest(".tarjeta").find("p").text())
+        $("#overlay").addClass("mostrar")
+    })
+})
+
+$("#overlay").click(function(e) { 
+    $("#overlay").removeClass("mostrar")
+})
+
