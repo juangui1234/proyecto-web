@@ -244,6 +244,15 @@ th {
     align-self: center;
 }
 
+.mensaje_login {
+    color: #b6e3b6;
+    align-self: center;
+}
+
+.mensaje_login.error {
+    color: #ffb3b3;
+}
+
 .img_inicio_sesion{
     width: 80%;
 }
