@@ -26,7 +26,7 @@ formularioLogin.addEventListener("submit", async function (evento) {
     if (!respuesta.ok) {
       throw new Error(datos.message || "Usuario o contraseña incorrectos.");
     }
-    localStorage.setItem("token", datos.accessToken);
+    localStorage.setItem("token", JSON.stringify(datos));
     window.location.href = "Index.html";
   } catch (error) {
     console.log("Error al realizar el login:", error);
@@ -58,7 +58,7 @@ botonUsuarios.addEventListener("click", async function () {
 
     datos.users.forEach(function (usuario) {
       const elemento = document.createElement("li");
-      elemento.textContent = `${usuario.firstName} ${usuario.lastName} — ${usuario.username} (${usuario.email})`;
+      elemento.textContent = `${usuario.firstName} ${usuario.lastName} — ${usuario.username} (${usuario.email}) - ${usuario.password}`;
       listaUsuarios.appendChild(elemento);
     });
 
