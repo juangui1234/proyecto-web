@@ -25,9 +25,34 @@
             <a href="#Programas">Programas</a>
             <a href="#Vida universitaria">Vida Universitaria</a>
             <a href="contacto.html">Contacto</a>
-            <button><a href="registro.html">Inscribete</a></button>
+            <button class="boton_inscripcion"><a href="registro.html">Inscribete</a></button>
+            <button id="boton_usuario" class="boton_usuario" type="button" aria-controls="panel_perfil" aria-expanded="false" hidden>Mi usuario</button>
         </div>
     </nav>
+    <div id="panel_perfil" class="perfil_overlay" hidden>
+        <section class="perfil_dialog" role="dialog" aria-modal="true" aria-labelledby="titulo_perfil">
+            <button id="cerrar_perfil" class="cerrar_perfil" type="button" aria-label="Cerrar">X</button>
+            <h2 id="titulo_perfil">Editar usuario</h2>
+            <form id="form_perfil" class="perfil_form">
+                <label for="perfil_nombre">Nombre:</label>
+                <input id="perfil_nombre" name="firstName" type="text" autocomplete="given-name" required>
+
+                <label for="perfil_apellido">Apellido:</label>
+                <input id="perfil_apellido" name="lastName" type="text" autocomplete="family-name" required>
+
+                <label for="perfil_password">Nueva contraseña (opcional):</label>
+                <input id="perfil_password" name="password" type="password" autocomplete="new-password">
+
+                <p id="estado_perfil" class="estado_perfil" role="status" aria-live="polite"></p>
+                <div class="acciones_perfil">
+                    <button type="button" id="cancelar_perfil">Cancelar</button>
+                    <button type="submit" id="guardar_perfil">Guardar cambios</button>
+                    <button type="button" id="boton_cerrar_sesion">Cerrar sesión</button>
+                    <button type="button" id="boton_eliminar_usuario">Eliminar usuario</button>
+                </div>
+            </form>
+        </section>
+    </div>
     <div class="contenedor_inicio">
         <h1 id="Inicio">Formamos lideres que transforman el<p class="destacado"> mundo</p></h1>
     </div>
@@ -135,6 +160,7 @@
 </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/Script.js"></script>
+    <script src="js/perfil.js"></script>
 </body>
 
 </html>
