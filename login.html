@@ -25,7 +25,12 @@
             <input type="password" id="password" name="password" autocomplete="current-password" required>
             <p class="parrafo_login"> No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
             <button id="boton_login" type="submit">Ingresar</button>
+            <button id="boton_usuarios" type="button" aria-controls="panel_usuarios">Usuarios</button>
         </form>
+        <section id="panel_usuarios" class="panel_usuarios" aria-label="Lista de usuarios" hidden>
+            <p id="estado_usuarios" class="estado_usuarios" role="status" aria-live="polite"></p>
+            <ul id="lista_usuarios" class="lista_usuarios"></ul>
+        </section>
     </div>
     <div class="logo_inicio_sesion">
  <img class="img_inicio_sesion" src="img/logo_inicio_sesion.jpeg"/>

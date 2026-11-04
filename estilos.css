@@ -77,6 +77,11 @@ button {
     width: 100%;
     font-weight: bold;
 }
+
+#boton_usuarios {
+    margin-top: 12px;
+}
+
 .botones {
     display: grid;
     align-items: center;
@@ -251,6 +256,34 @@ th {
 
 .mensaje_login.error {
     color: #ffb3b3;
+}
+
+.panel_usuarios {
+    margin-top: 20px;
+    padding: 16px;
+    max-height: 350px;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.panel_usuarios[hidden] {
+    display: none;
+}
+
+.estado_usuarios {
+    margin: 0 0 12px;
+}
+
+.lista_usuarios {
+    padding-left: 24px;
+    color: #152d5b;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.lista_usuarios li {
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
 }
 
 .img_inicio_sesion{
