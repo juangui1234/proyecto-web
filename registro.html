@@ -16,7 +16,7 @@
   <body>
     <div class="contenedor_login">
       <div class="formulario">
-        <form>
+        <form id="form_registro">
           <h1 class="titulo_login">Registrate</h1>
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required />
@@ -63,8 +63,8 @@
           <label for="password">Contraseña:</label>
           <input type="password" id="password" name="password" required />
 
-          <label for="Carrera">Carrera:</label>
-          <select name="Carrera" id="Carrera">
+          <label for="carrera">Carrera:</label>
+          <select name="carrera" id="carrera" required>
             <option value="">Seleccionar carrera</option>
             <option value="Ingenieria">Ingenieria</option>
             <option value="Medicina">Medicina</option>
@@ -80,12 +80,7 @@
             <button id="boton_registro" type="submit">Registrarse</button>
             <button type="reset">Limpiar</button>
           </div>
-          <div>
-            <p class="parrafo_js" id="form_nombre"></p>
-            <p class="parrafo_js" id="form_celular"></p>
-            <p class="parrafo_js" id="form_direccion"></p>
-            <p class="parrafo_js" id="form_correo"></p>
-          </div>
+          <p class="parrafo_login" id="estado_registro" role="status" aria-live="polite"></p>
         </form>
       </div>
       <div class="logo_inicio_sesion">
@@ -96,7 +91,6 @@
         />
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="/proyecto-web/js/Script.js"></script>
+    <script src="js/registroNode.js"></script>
   </body>
 </html>
