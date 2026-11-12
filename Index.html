@@ -25,34 +25,57 @@
             <a href="#Programas">Programas</a>
             <a href="#Vida universitaria">Vida Universitaria</a>
             <a href="contacto.html">Contacto</a>
+            <a id="link_iniciar_sesion" href="login.html">Iniciar sesión</a>
             <button class="boton_inscripcion"><a href="registro.html">Inscribete</a></button>
-            <button id="boton_usuario" class="boton_usuario" type="button" aria-controls="panel_perfil" aria-expanded="false" hidden>Mi usuario</button>
+            <button id="boton_cerrar_sesion" class="boton_usuario" type="button" hidden>Cerrar sesión</button>
         </div>
     </nav>
-    <div id="panel_perfil" class="perfil_overlay" hidden>
-        <section class="perfil_dialog" role="dialog" aria-modal="true" aria-labelledby="titulo_perfil">
-            <button id="cerrar_perfil" class="cerrar_perfil" type="button" aria-label="Cerrar">X</button>
-            <h2 id="titulo_perfil">Editar usuario</h2>
-            <form id="form_perfil" class="perfil_form">
-                <label for="perfil_nombre">Nombre:</label>
-                <input id="perfil_nombre" name="firstName" type="text" autocomplete="given-name" required>
+    <section id="gestion_usuarios" class="gestion_usuarios" aria-labelledby="titulo_gestion_usuarios" hidden>
+        <h2 id="titulo_gestion_usuarios">Gestión de usuarios</h2>
+        <h3>Consultar usuarios</h3>
+        <button id="recargar_usuarios" class="boton_recargar_usuarios" type="button">Actualizar lista</button>
+        <p id="estado_usuarios" class="estado_usuarios" role="status" aria-live="polite"></p>
+        <div class="tabla_usuarios">
+            <table aria-label="Usuarios registrados">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Carrera</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="lista_usuarios"></tbody>
+            </table>
+        </div>
 
-                <label for="perfil_apellido">Apellido:</label>
-                <input id="perfil_apellido" name="lastName" type="text" autocomplete="family-name" required>
+        <section aria-labelledby="titulo_actualizar_usuario">
+            <h3 id="titulo_actualizar_usuario">Actualizar usuario</h3>
+            <form id="form_actualizar_usuario" class="form_usuarios">
+                <label for="usuario_seleccionado">Usuario:</label>
+                <select id="usuario_seleccionado" required disabled>
+                    <option value="">Selecciona un usuario en la lista</option>
+                </select>
 
-                <label for="perfil_password">Nueva contraseña (opcional):</label>
-                <input id="perfil_password" name="password" type="password" autocomplete="new-password">
+                <label for="nombre_usuario">Nombre:</label>
+                <input id="nombre_usuario" type="text" required disabled>
 
-                <p id="estado_perfil" class="estado_perfil" role="status" aria-live="polite"></p>
-                <div class="acciones_perfil">
-                    <button type="button" id="cancelar_perfil">Cancelar</button>
-                    <button type="submit" id="guardar_perfil">Guardar cambios</button>
-                    <button type="button" id="boton_cerrar_sesion">Cerrar sesión</button>
-                    <button type="button" id="boton_eliminar_usuario">Eliminar usuario</button>
-                </div>
+                <label for="carrera_usuario">Carrera:</label>
+                <select id="carrera_usuario" disabled>
+                    <option value="">Sin carrera</option>
+                    <option value="Ingenieria">Ingenieria</option>
+                    <option value="Medicina">Medicina</option>
+                    <option value="Economia">Economia</option>
+                    <option value="Derecho">Derecho</option>
+                    <option value="Diseño">Diseño</option>
+                    <option value="Ambientales">Ambientales</option>
+                </select>
+
+                <button id="guardar_usuario" type="submit" disabled>Guardar cambios</button>
+                <p id="estado_actualizacion" class="estado_usuarios" role="status" aria-live="polite"></p>
             </form>
         </section>
-    </div>
+    </section>
     <div class="contenedor_inicio">
         <h1 id="Inicio">Formamos lideres que transforman el<p class="destacado"> mundo</p></h1>
     </div>
